@@ -1,0 +1,21 @@
+@startuml Platform
+
+object Games
+object Users
+object Matches
+object Stats
+object Hangman
+object TicTacToe
+
+Users --|{ Matches
+Matches --|{ Games
+
+Users --|{ Stats
+Games --|{ Stats
+
+Games --|{ Hangman
+Games --|{ TicTacToe
+
+
+
+@enduml

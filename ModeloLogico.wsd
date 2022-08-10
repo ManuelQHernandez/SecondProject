@@ -1,0 +1,88 @@
+@startuml ModeloLogico
+
+entity Users_player {
+    * id_user   : number <<generated>>
+    --
+    *  name     : text
+    *  login    : text
+    *  password : number
+}
+
+entity Games {
+    * id_game    : number <<generated>>
+    --
+    * type_game  : text
+    * id_user : number <<FK>>
+}
+
+entity Hangman {
+    *  id_hangman  : number <<generated>>
+    --
+    *  created     : timestamp
+    *  game_status : boolean
+    *  id_game : number <<FK>>
+}
+
+entity TicTacToe {
+    *  id_tictac : number <<generated>>
+    --
+    *  created     : timestamp
+    *  game_status : boolean
+    *  piece       : char
+    *  id_game : number <<FK>>
+}
+
+entity Words {
+    *  id_word : number <<generated>>
+    --
+    *  word    : char
+    *  guessed : char
+    *  won     : number
+    *  lost    : number
+    *  game_no : number
+    *  id_hangman : number <<FK>>
+}
+
+entity Move {
+    *  id_move : number <<generated>>
+    --
+    *  board_row    : number
+    *  board_column : number
+    *  id_tictac    : number <<FK>>
+}
+
+entity Hangman_stats {
+    *  id_hangman_stats : number <<generated>>
+    --
+    *  score      : number
+    *  goals      : number
+    *  id_user    : number <<FK>>
+    *  id_hangman : number <<FK>>
+}
+
+entity TicTacToe_stats {
+    *  id_tictac_stats : number <<generated>>
+    --
+    *  score      : number
+    *  win        : number
+    *  ties       : number
+    *  lost       : number
+    *  id_user    : number <<FK>>
+    *  id_tictac  : number <<FK>>
+}
+
+Hangman }|-- Games
+TicTacToe }|-- Games
+
+Users_player }|-- Games  
+
+Hangman }|-- Words
+TicTacToe }|-- Move
+
+Hangman_stats }|-- Users_player
+Hangman_stats }|-- Hangman
+
+TicTacToe_stats }|-- Users_player
+TicTacToe_stats }|-- TicTacToe
+
+@enduml
