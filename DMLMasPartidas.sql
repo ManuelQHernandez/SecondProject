@@ -1,5 +1,7 @@
 /**El jugador con más partidas jugadas*/
 
-select count(player.id_user) as Cantidad_Partidas, usp.name as name 
-from Games player 
-join users_player usp on player.id_user = usp.id_user and player.id_user =1 group by player.id_user, usp.name;
+SELECT MAX( COUNT(*)) as Cantidad_partidas
+FROM Games player
+JOIN Users_player usp
+ON player.id_user = usp.id_user 
+GROUP BY player.id_user, usp.name;
