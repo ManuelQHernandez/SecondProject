@@ -40,14 +40,14 @@ INSERT INTO Games VALUES(1,'hangman', 1);
 
 INSERT INTO Hangman VALUES(1,CURRENT_TIMESTAMP, 'TRUE', 1);
 
-INSERT INTO Words VALUES(1, 'L', 'L', 1, 0, 1, 1);
+INSERT INTO Words VALUES(1, 'L', 'L', 1, 1);
 
 /** PARTIDA DOS*/
 INSERT INTO Games VALUES(2,'hangman', 1);
 
 INSERT INTO Hangman VALUES(2,CURRENT_TIMESTAMP, 'TRUE', 2);
 
-INSERT INTO Words VALUES(2, 'O', 'O', 1, 0, 1, 2);
+INSERT INTO Words VALUES(2, 'O', 'O', 1, 2);
 
 
 
@@ -68,7 +68,7 @@ INSERT INTO Games VALUES(4,'hangman', 3);
 
 INSERT INTO Hangman VALUES(3,CURRENT_TIMESTAMP, 'TRUE', 4);
 
-INSERT INTO Words VALUES(3, 'O', 'O', 1, 0, 1, 3);
+INSERT INTO Words VALUES(3, 'V', 'V', 1, 3);
 
 
 /** USUARIO 4 */
@@ -78,7 +78,7 @@ INSERT INTO Games VALUES(5,'hangman', 4);
 
 INSERT INTO Hangman VALUES(4,CURRENT_TIMESTAMP, 'TRUE', 5);
 
-INSERT INTO Words VALUES(4, 'O', 'O', 1, 0, 1, 4);
+INSERT INTO Words VALUES(4, 'E', 'E', 2, 4);
 
 
 /** USUARIO 5 */
