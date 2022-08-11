@@ -98,3 +98,20 @@ INSERT INTO Games VALUES(7,'tictactoe', 6);
 INSERT INTO TicTacToe VALUES(3,CURRENT_TIMESTAMP, 'TRUE', 'O', 7);
 
 INSERT INTO Move VALUES(3, 2, 7, 3);
+
+
+
+
+/** Estadisticas de partida **/
+
+/**Partida 1**/
+INSERT INTO Hangman_stats VALUES(1, 150, 3, 1, 0, 1, 1);
+
+/**Partida 2**/
+INSERT INTO Hangman_stats VALUES(2, 200, 4, 1, 0, 1, 2);
+
+/**Partida 3**/
+INSERT INTO Hangman_stats VALUES(3, 250, 5, 0, 1, 2, 3);
+
+/**Partida 4**/
+INSERT INTO Hangman_stats VALUES(4, 300, 6, 0, 1, 4, 4);
