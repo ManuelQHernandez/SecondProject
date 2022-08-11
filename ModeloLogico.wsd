@@ -37,9 +37,7 @@ entity Words {
     --
     *  word    : char
     *  guessed : char
-    *  won     : number
-    *  lost    : number
-    *  game_no : number
+    *  try : number
     *  id_hangman : number <<FK>>
 }
 
@@ -56,6 +54,8 @@ entity Hangman_stats {
     --
     *  score      : number
     *  goals      : number
+    *  won     : number
+    *  lost    : number
     *  id_user    : number <<FK>>
     *  id_hangman : number <<FK>>
 }
