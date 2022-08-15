@@ -75,14 +75,7 @@ INSERT INTO Words VALUES(7, 'L', 'L', 2, 7);
 
 
 
-/** USUARIO 2 */
 
-/** PARTIDA UNO*/
-INSERT INTO Games VALUES(3,'TicTacToe', 2);
-
-INSERT INTO TicTacToe VALUES(1,CURRENT_TIMESTAMP, 'TRUE', 'X', 3);
-
-INSERT INTO Move VALUES(1, 0, 3, 1);
 
 
 
@@ -151,28 +144,24 @@ INSERT INTO Hangman VALUES(13,CURRENT_TIMESTAMP, 'TRUE', 16);
 INSERT INTO Words VALUES(13, 'X', 'X', 1, 13);
 
 
+
+
+
 /** USUARIO 5 */
 
 /** PARTIDA UNO */
-INSERT INTO Games VALUES(6,'tictactoe', 5);
+INSERT INTO Games VALUES(24,'hangman', 7);
 
-INSERT INTO TicTacToe VALUES(2,CURRENT_TIMESTAMP, 'TRUE', 'O', 6);
+INSERT INTO Hangman VALUES(14,CURRENT_TIMESTAMP, 'TRUE', 24);
 
-INSERT INTO Move VALUES(2, 0, 3, 2);
-
-/** USUARIO 6 */
-
-/** PARTIDA UNO */
-INSERT INTO Games VALUES(7,'tictactoe', 6);
-
-INSERT INTO TicTacToe VALUES(3,CURRENT_TIMESTAMP, 'TRUE', 'O', 7);
-
-INSERT INTO Move VALUES(3, 2, 7, 3);
+INSERT INTO Words VALUES(14, 'T', 'T', 2, 14);
 
 
 
 
-/** Estadisticas de partida **/
+
+
+/** Estadisticas de partidas hangman **/
 
 /**Partida 1**/
 INSERT INTO Hangman_stats VALUES(1, 150, 3, 1, 0, 1, 1);
@@ -212,3 +201,108 @@ INSERT INTO Hangman_stats VALUES(11, 200, 4, 1, 0, 4, 11);
 /**Partida 12**/
 INSERT INTO Hangman_stats VALUES(12, 250, 5, 0, 1, 4, 12);
 
+/**Partida 13**/
+INSERT INTO Hangman_stats VALUES(13, 150, 3, 1, 0, 7, 13);
+
+
+
+/**-------------------------------------------------------------------------**/
+
+
+/** TIC TAC TOE **/
+
+/** USUARIO 2 */
+
+/** PARTIDA UNO*/
+INSERT INTO Games VALUES(3,'TicTacToe', 2);
+
+INSERT INTO TicTacToe VALUES(1,CURRENT_TIMESTAMP, 'TRUE', 'X', 3);
+
+INSERT INTO Move VALUES(1, 0, 3, 1);
+
+
+/** PARTIDA DOS*/
+INSERT INTO Games VALUES(17,'TicTacToe', 2);
+
+INSERT INTO TicTacToe VALUES(4,CURRENT_TIMESTAMP, 'TRUE', 'X', 17);
+
+INSERT INTO Move VALUES(4, 5, 8, 4);
+
+/** PARTIDA TRES*/
+INSERT INTO Games VALUES(18,'TicTacToe', 2);
+
+INSERT INTO TicTacToe VALUES(5,CURRENT_TIMESTAMP, 'TRUE', 'O', 18);
+
+INSERT INTO Move VALUES(5, 6, 9, 5);
+
+/** PARTIDA CUATRO*/
+INSERT INTO Games VALUES(19,'TicTacToe', 2);
+
+INSERT INTO TicTacToe VALUES(6,CURRENT_TIMESTAMP, 'TRUE', 'O', 19);
+
+INSERT INTO Move VALUES(6, 1, 9, 6);
+
+
+
+/** USUARIO 5 */
+
+/** PARTIDA UNO */
+INSERT INTO Games VALUES(6,'tictactoe', 5);
+
+INSERT INTO TicTacToe VALUES(2,CURRENT_TIMESTAMP, 'TRUE', 'O', 6);
+
+INSERT INTO Move VALUES(2, 0, 3, 2);
+
+/** PARTIDA DOS */
+INSERT INTO Games VALUES(20,'tictactoe', 5);
+
+INSERT INTO TicTacToe VALUES(7,CURRENT_TIMESTAMP, 'TRUE', 'X', 20);
+
+INSERT INTO Move VALUES(7, 0, 1, 7);
+
+
+/** PARTIDA TRES */
+INSERT INTO Games VALUES(21,'tictactoe', 5);
+
+INSERT INTO TicTacToe VALUES(8,CURRENT_TIMESTAMP, 'TRUE', 'X', 21);
+
+INSERT INTO Move VALUES(8, 2, 1, 8);
+
+
+/** USUARIO 6 */
+
+/** PARTIDA UNO */
+INSERT INTO Games VALUES(7,'tictactoe', 6);
+
+INSERT INTO TicTacToe VALUES(3,CURRENT_TIMESTAMP, 'TRUE', 'O', 7);
+
+INSERT INTO Move VALUES(3, 2, 7, 3);
+
+/** PARTIDA DOS */
+INSERT INTO Games VALUES(22,'tictactoe', 6);
+
+INSERT INTO TicTacToe VALUES(9, CURRENT_TIMESTAMP, 'TRUE', 'X', 22);
+
+INSERT INTO Move VALUES(9, 0, 8, 9);
+
+/** PARTIDA TRES */
+INSERT INTO Games VALUES(23,'tictactoe', 6);
+
+INSERT INTO TicTacToe VALUES(10, CURRENT_TIMESTAMP, 'TRUE', 'X', 23);
+
+INSERT INTO Move VALUES(10, 4, 7, 10);
+
+
+
+/** Estadisticas de partidas TicTacToe **/
+
+INSERT INTO tictactoe_stats VALUES(1, 200, 1,0, 0, 2, 1);
+INSERT INTO tictactoe_stats VALUES(2, 100, 1,0, 0, 5, 2);
+INSERT INTO tictactoe_stats VALUES(3, 120, 0,1, 0, 6, 3);
+INSERT INTO tictactoe_stats VALUES(4, 300, 0,0, 1, 2, 4);
+INSERT INTO tictactoe_stats VALUES(5, 250, 0,0, 1, 2, 5);
+INSERT INTO tictactoe_stats VALUES(6, 180, 1,0, 0, 2, 6);
+INSERT INTO tictactoe_stats VALUES(7, 270, 1,0, 0, 5, 7);
+INSERT INTO tictactoe_stats VALUES(8, 170, 0,1, 0, 5, 8);
+INSERT INTO tictactoe_stats VALUES(9, 350, 0,0, 1, 6, 9);
+INSERT INTO tictactoe_stats VALUES(10, 200, 0,1, 0, 6, 10);
